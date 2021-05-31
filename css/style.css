@@ -1,0 +1,58 @@
+body {
+    background-color: hsl(222, 26%, 31%);
+    color: white; 
+}
+
+main {
+    width: 450px;
+    margin: 40px auto;   /* center element */
+}
+
+.keypad {
+    background-color: hsl(223, 31%, 20%);
+    border-radius: 7px;
+}
+.screen {
+    background-color: hsl(224, 36%, 15%);
+    border-radius: 7px;
+    padding: 20px;
+    font-size: x-large;
+    margin-bottom: 15px;
+}
+.header {
+    margin: 20px 0;
+}
+.keypad {
+    padding: 20px 10px;
+    border-radius: 7px;
+}
+.keypad div button{
+    width: 90px;
+    height: 55px;
+    margin: 12px 8px;
+    font-weight: 500;
+    border-radius: 7px;
+    border: none;
+}
+.keypad .white {
+    box-shadow: 0px 4px hsl(28, 16%, 65%);
+    background-color: hsl(30, 25%, 89%);
+    font-size: x-large;
+    color: hsl(224, 36%, 15%);
+}
+.keypad .red {
+    background-color: hsl(6, 63%, 50%);
+    box-shadow: 0px 4px hsl(6, 70%, 34%);
+    font-size: larger;
+    color: hsl(30, 25%, 89%);
+}
+.keypad .blue {
+    background-color: hsl(225, 21%, 49%);
+    box-shadow: 0px 4px hsl(224, 28%, 35%);
+    font-size: larger;
+    color: hsl(30, 25%, 89%);
+}
+
+.keypad div:last-child button {
+    width: 195px;
+}
