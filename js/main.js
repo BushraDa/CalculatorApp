@@ -41,7 +41,7 @@ function deleteCalculator() {
 function updateScreen(elem) {
     value = $('.screen').text();
     newVal = elem.innerText;
-    if (value == 0)
+    if (value == 0 || value == 'NaN')
         $('.screen').text(newVal);
     else
         $('.screen').text(value + newVal);
