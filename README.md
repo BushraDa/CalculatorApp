@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 
 ### Links
@@ -51,4 +51,4 @@ Users should be able to:
 ## Author
 
 - Website - [Bushra Daoud](https://bushrada.github.io/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/BushraDa)
+- Frontend Mentor - [@BushraDa](https://www.frontendmentor.io/profile/BushraDa)
