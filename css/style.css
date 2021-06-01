@@ -53,6 +53,3 @@ main {
     color: hsl(30, 25%, 89%);
 }
 
-.keypad div:last-child button {
-    width: 195px;
-}
