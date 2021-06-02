@@ -1,0 +1,98 @@
+
+/* height */
+$h: 20px;
+/* width */
+$w: $h * 3;
+/* toggle dimensions */
+$tw: $h * 1.2;
+/* labels animation time */
+$ta: 6s;
+
+@mixin animationDelay($time) {
+  -webkit-animation-delay: $time;
+  -o-animation-delay: $time;
+  -moz-animation-delay: $time;
+  animation-delay: $time;
+}
+
+@mixin animation($time) {
+  -webkit-animation: $time rot-label ease-in-out infinite;
+  -moz-animation: $time rot-label ease-in-out infinite;
+  -o-animation: $time rot-label ease-in-out infinite;
+  animation: $time rot-label ease-in-out infinite;
+}
+
+.wrapper {
+  width: $w;
+  height: $h;
+  position: relative;
+  margin: 2rem auto;
+  border-radius: $h/2;
+  background: hsl(224, 36%, 15%);
+
+  
+  & .toggle {
+    width: $tw;
+    height: $tw;
+    position: absolute;
+    left: $w / 3 - ($tw - $h) / 2;
+    top: -($tw - $h) / 2;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: hsl(6, 63%, 50%);
+    
+    transition:
+        all .3s cubic-bezier(
+          0.175, 0.885, 0.320, 1.275
+        );
+  }
+
+  & label {
+    cursor: pointer;
+    width: $h;
+    height: $h;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    display: inline-block;  
+    
+    @include animation($ta);
+  }
+  
+  & input {
+    position: absolute;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0;
+  }
+}
+
+#yes_radio:checked {  
+  ~ .toggle {
+    left: -($tw - $h) / 2;
+  }
+}
+
+#no_radio:checked {  
+  ~ .toggle {
+    left: $w * 2 / 3 - ($tw - $h) / 2;
+  }
+}
+
+#maybe_radio, #maybe-lbl {
+  left: 100% * 1 / 3;
+}
+
+#no_radio, #no-lbl {
+  left: 100% * 2 / 3;
+}
+
+#maybe-lbl {
+  @include animationDelay($ta / 3);
+}
+
+#no-lbl {
+  @include animationDelay($ta * 2 / 3);
+}

@@ -1,0 +1,74 @@
+
+.wrapper {
+  width: 60px;
+  height: 20px;
+  position: relative;
+  margin: 0 5px;
+  border-radius: 10px;
+  background: var(--keypad-background);
+}
+
+.wrapper .toggle {
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 18px;
+  top: 4px;
+  border-radius: 50%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: var(--key2);
+  -webkit-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wrapper label {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+  display: inline-block;
+  -webkit-animation: 6s rot-label ease-in-out infinite;
+  animation: 6s rot-label ease-in-out infinite;
+}
+
+.wrapper input {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+#theme1:checked ~ .toggle {
+  left: 5px;
+}
+
+#theme3:checked ~ .toggle {
+  left: 42px;
+}
+
+#theme2:checked ~ .toggle {
+  left: 22px;
+}
+
+#theme2, #theme2-lbl {
+  left: 33.33333%;
+}
+
+#theme3, #theme3-lbl {
+  left: 66.66667%;
+}
+
+#theme2-lbl {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+#theme3-lbl {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}

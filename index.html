@@ -7,6 +7,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/toggle.css">
   <title>Frontend Mentor | Calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -24,14 +25,35 @@
   </div>
 
   <main>
-    <div class="row header">
-      <div class="col-6 d-flex justify-content-start">
-        clac
-      </div>
-      <div class="col-6 d-flex justify-content-end">
-        THEME
+    <div class="header">
+      <ul class="font-small d-flex justify-content-end">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+      <div class="row">
+        <div class="col-6 d-flex justify-content-start">
+          calc
+        </div>
+  
+        <div class="col-6 d-flex justify-content-end">
+          <div class="font-small">THEME</div>
+          <div class="wrapper">
+            <label for="theme1" id="theme1-lbl"></label>
+            <input type="radio" value="theme1" name="choice_radio" id="theme1" onchange="setTheme(this)" checked>
+  
+            <label for="theme2" id="theme2-lbl"></label>
+            <input type="radio" value="theme2" name="choice_radio" id="theme2" onchange="setTheme(this)">
+  
+            <label for="theme3" id="theme3-lbl"></label>
+            <input type="radio" value="theme3" name="choice_radio" id="theme3" onchange="setTheme(this)">
+            
+            <div class="toggle"></div>
+          </div>
+        </div>
       </div>
     </div>
+
     <div class="screen text-end">0</div>
     <div class="keypad ">
       <div class="row align-items-center justify-content-center">
@@ -50,7 +72,7 @@
         <button class="white decimal" value="." onclick="updateScreen(this)">.</button>
         <button class="white digit" value="0" onclick="updateScreen(this)">0</button>
         <button class="white operator" value="/" onclick="operator(this)">/</button>
-        <button class="white operator" value="*" onclick="operator(this)">x</button>
+        <button class="white operator" value="*" onclick="operator(this)">*</button>
 
         <button class="blue reset" onclick="resetCalculator()" type="reset">RESET</button>
         <button class="red submit" onclick="calculate()" type="submit">=</button>
