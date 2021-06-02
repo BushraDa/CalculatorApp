@@ -42,10 +42,10 @@ Users should be able to:
 - CSS
 - Bootstrap
 - Javascript
+- SCSS
 
 ### Continued development
 
-- Theme Toggle
 - Multi Operation
 
 ## Author
